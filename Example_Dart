@@ -1,0 +1,30 @@
+void main() {
+  var borsh = Recipe();
+  borsh.add("Капуста");
+  borsh.add("Картошка");
+  borsh.add("Свёкла");
+  borsh.printComponents();
+}
+
+void printList(List list) {
+  for (int i = 0; i < list.length; i = i + 1) {
+    String item = list[i];
+    print(item);
+  }
+}
+
+class Recipe {
+  List components = [];
+
+  void add(String component) {
+    components.add(component);
+  }
+
+  void printComponents() {
+    printList(components);
+  }
+
+  num componentsCounts() {
+    return components.length;
+  }
+}
